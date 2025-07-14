@@ -1,0 +1,8 @@
+{
+  "name": "Pronunciation Practice_L1C1",
+  "description": "An app to practice pronunciation with AI-based feedback.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}

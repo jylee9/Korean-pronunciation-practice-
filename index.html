@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pronunciation Practice_L1C1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="index.css" />
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.9.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <main id="app-container">
+      <h1>Pronunciation Practice_L1C1</h1>
+      <div id="word-selection"></div>
+      <div id="pronunciation-area">
+        <div id="word-display" aria-live="polite"></div>
+        <button id="play-pronunciation-button" class="speaker-button" aria-label="Listen to pronunciation">
+            <span class="material-symbols-outlined">volume_up</span>
+        </button>
+      </div>
+      <div id="meaning-container">
+          <button id="toggle-meaning-button" class="secondary-button" aria-controls="word-meaning">Show Meaning</button>
+          <p id="word-meaning" class="hidden" aria-live="polite"></p>
+      </div>
+      <button id="record-button" aria-label="Start Recording">
+        <span class="material-symbols-outlined">mic</span>
+        <span class="button-text">Start Recording</span>
+      </button>
+      <div id="feedback-mode-container">
+        <p>Feedback Mode</p>
+        <fieldset id="feedback-mode-selector" role="radiogroup">
+            <input type="radio" id="mode-en-text" name="feedback-mode" value="en-text" checked>
+            <label for="mode-en-text">English Text</label>
+            <input type="radio" id="mode-ko-voice" name="feedback-mode" value="ko-voice">
+            <label for="mode-ko-voice">Korean Voice + Text</label>
+        </fieldset>
+      </div>
+      <div id="score-container" class="hidden">
+        <h3>Pronunciation Score</h3>
+        <div class="progress-bar-container">
+            <div id="score-bar"></div>
+            <span id="score-text">0%</span>
+        </div>
+      </div>
+      <div id="feedback-container">
+        <div class="feedback-header">
+          <h2>Feedback</h2>
+        </div>
+        <p id="feedback-text">Your feedback will be displayed here.</p>
+      </div>
+    </main>
+    <script type="module" src="index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
